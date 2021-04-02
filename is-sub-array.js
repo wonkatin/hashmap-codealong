@@ -1,5 +1,34 @@
 console.clear();
-const isSubArray = (arr1, arr2) => {};
+const isSubArray = (arr1, arr2) => {
+  const hash = {}
+  // for (const word of arr1) {
+  //   hash[word] = word
+  //   console.log(hash)
+  // }
+  // for (const word2 of arr2) {
+  //   if(hash[word2]) {
+  //     console.log()
+  //     return true
+  //   }
+  // }
+
+  for (const element of arr1) {
+    if(hash[element]=== undefined){
+      hash[element] = 1
+      console.log(hash)
+    } else {
+      hash[element] = hash[element] + 1
+    }
+  }
+  for (const element of arr2) {
+   if(hash[element]=== undefined) {
+     return false
+   } else {
+     hash[element] = hash[element] -1
+   }
+  }
+  return true
+};
 
 const result1 = isSubArray(
   ["hey", "what", "is", "up", "with", "hashmap"],
