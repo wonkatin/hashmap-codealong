@@ -21,7 +21,8 @@ const isSubArray = (arr1, arr2) => {
     }
   }
   for (const element of arr2) {
-   if(hash[element]=== undefined) {
+  //  if(hash[element]=== undefined) {
+    if(!hash[element]) {
      return false
    } else {
      hash[element] = hash[element] -1
